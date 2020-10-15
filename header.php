@@ -27,6 +27,7 @@
 
 	<header id="masthead" class="site-header">
 		<div class="header-left-column">
+			<div>
 		<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
@@ -43,6 +44,7 @@
 				?>
 				<p class="site-description"><?php echo $about_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
+			</div>
 		</div>
 		<div class="site-branding">
 			
