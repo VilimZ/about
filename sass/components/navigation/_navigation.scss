@@ -1,7 +1,20 @@
+#site-navigation {
+	max-width: max-content;
+	border: 1px orange solid;
+    padding: 1rem;
+}
+
+#site-navigation > ul, li, a {
+	
+	color: yellow;
+	font-size: large;
+	font-weight: bold;
+}
+
 .main-navigation {
 	display: block;
 	width: 100%;
-	border: azure 2px solid;
+	
 
 	ul {
 		display: none;
@@ -107,4 +120,10 @@
 		text-align: end;
 		flex: 1 0 50%;
 	}
+}
+
+
+.header-menu > * {
+	display: flex;
+	flex-direction: column;
 }

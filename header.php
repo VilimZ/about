@@ -46,7 +46,7 @@
 			<?php endif; ?>
 			</div>
 		</div>
-		<div class="site-branding">
+		<div class="header-right-column">
 			
 
 			<nav id="site-navigation" class="main-navigation">
@@ -54,13 +54,14 @@
 			<?php
 			wp_nav_menu(
 				array(
-					'theme_location' => 'menu-1',
+					'theme_location' => 'header-menu',
 					'menu_id'        => 'primary-menu',
+					'container_class' => 'header-menu'
 				)
 			);
 			?>
 		</nav><!-- #site-navigation -->
-		</div><!-- .site-branding -->
+		</div><!-- .header-right-column -->
 
 		
 	</header><!-- #masthead -->

@@ -641,14 +641,14 @@ textarea {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	padding-right: 1rem;
 }
 
-.site-branding {
-	display: flex;
-	flex-direction: column;
+.header-right-column {
 	background-color: greenyellow;
-	padding-top: 50%;
-	padding-left: 10%;
+	display: flex;
+	align-items: center;
+	padding-left: 1rem;
 }
 
 /*--------------------------------------------------------------
@@ -656,10 +656,21 @@ textarea {
 --------------------------------------------------------------*/
 /* Navigation
 --------------------------------------------- */
+#site-navigation {
+	max-width: max-content;
+	border: 1px orange solid;
+	padding: 1rem;
+}
+
+#site-navigation > ul, li, a {
+	color: yellow;
+	font-size: large;
+	font-weight: bold;
+}
+
 .main-navigation {
 	display: block;
 	width: 100%;
-	border: azure 2px solid;
 }
 
 .main-navigation ul {
@@ -745,6 +756,11 @@ textarea {
 .post-navigation .nav-next {
 	text-align: end;
 	flex: 1 0 50%;
+}
+
+.header-menu > * {
+	display: flex;
+	flex-direction: column;
 }
 
 /* Posts and pages
