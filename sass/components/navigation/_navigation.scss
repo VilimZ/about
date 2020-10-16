@@ -4,12 +4,7 @@
     padding: 1rem;
 }
 
-#site-navigation > ul, li, a {
-	
-	color: yellow;
-	font-size: large;
-	font-weight: bold;
-}
+
 
 .main-navigation {
 	display: block;
@@ -125,5 +120,14 @@
 
 .header-menu > * {
 	display: flex;
-	flex-direction: column;
+	flex-direction: column;	
+}
+
+.header-menu > a,a:visited {
+	color: white;
+
+}
+
+.header-menu > a:hover {
+	color: red;
 }

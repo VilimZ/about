@@ -645,10 +645,16 @@ textarea {
 }
 
 .header-right-column {
-	background-color: greenyellow;
+	background-color: rgba(8, 10, 6, 0.733);
 	display: flex;
 	align-items: center;
 	padding-left: 1rem;
+}
+
+.header-right-column > a {
+	color: yellow;
+	font-size: large;
+	font-weight: bold;
 }
 
 /*--------------------------------------------------------------
@@ -660,12 +666,6 @@ textarea {
 	max-width: max-content;
 	border: 1px orange solid;
 	padding: 1rem;
-}
-
-#site-navigation > ul, li, a {
-	color: yellow;
-	font-size: large;
-	font-weight: bold;
 }
 
 .main-navigation {
@@ -761,6 +761,14 @@ textarea {
 .header-menu > * {
 	display: flex;
 	flex-direction: column;
+}
+
+.header-menu > a, a:visited {
+	color: white;
+}
+
+.header-menu > a:hover {
+	color: red;
 }
 
 /* Posts and pages
