@@ -56,7 +56,8 @@
 				array(
 					'theme_location' => 'header-menu',
 					'menu_id'        => 'primary-menu',
-					'container_class' => 'header-menu'
+					'container_class' => 'header-menu',
+					'menu_class'	=>   'header-menu'		
 				)
 			);
 			?>

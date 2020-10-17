@@ -6,6 +6,7 @@
 
 
 
+
 .main-navigation {
 	display: block;
 	width: 100%;
@@ -118,16 +119,12 @@
 }
 
 
-.header-menu > * {
+.header-menu {
 	display: flex;
 	flex-direction: column;	
-}
-
-.header-menu > a,a:visited {
 	color: white;
-
 }
 
-.header-menu > a:hover {
-	color: red;
+.header-menu a {
+	color: white;
 }
