@@ -16,7 +16,7 @@
 	grid-template-columns: auto auto;
 	padding: 0;
 	background-color: gray; //TEMP
-	min-height: 40rem;
+	min-height: 60rem;
 
 }
 .header-left-column {
@@ -25,21 +25,18 @@
 	align-items: center;
 	justify-content: flex-end;
 	padding-right: 1rem;
+	color: white;
 
-
+	a {
+		text-decoration: none;
+		color: white;
+	}
 }
+
+
 .header-right-column {
 	background-color: rgba(8, 10, 6, 0.733);
 	display: flex;
 	align-items: center;
 	padding-left: 1rem;
-}
-
-.header-right-column > a {
-
-
-		color: yellow;
-		font-size: large;
-		font-weight: bold;
-
 }

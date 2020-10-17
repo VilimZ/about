@@ -10,7 +10,7 @@
 .main-navigation {
 	display: block;
 	width: 100%;
-	
+
 
 	ul {
 		display: none;
@@ -121,10 +121,14 @@
 
 .header-menu {
 	display: flex;
-	flex-direction: column;	
+	flex-direction: column;
 	color: white;
 }
 
 .header-menu a {
 	color: white;
+}
+
+.header-menu a:hover {
+	font-weight: bold;
 }

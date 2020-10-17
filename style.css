@@ -633,7 +633,7 @@ textarea {
 	grid-template-columns: auto auto;
 	padding: 0;
 	background-color: gray;
-	min-height: 40rem;
+	min-height: 60rem;
 }
 
 .header-left-column {
@@ -642,6 +642,12 @@ textarea {
 	align-items: center;
 	justify-content: flex-end;
 	padding-right: 1rem;
+	color: white;
+}
+
+.header-left-column a {
+	text-decoration: none;
+	color: white;
 }
 
 .header-right-column {
@@ -649,12 +655,6 @@ textarea {
 	display: flex;
 	align-items: center;
 	padding-left: 1rem;
-}
-
-.header-right-column > a {
-	color: yellow;
-	font-size: large;
-	font-weight: bold;
 }
 
 /*--------------------------------------------------------------
@@ -766,6 +766,10 @@ textarea {
 
 .header-menu a {
 	color: white;
+}
+
+.header-menu a:hover {
+	font-weight: bold;
 }
 
 /* Posts and pages
