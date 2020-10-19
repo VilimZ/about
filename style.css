@@ -630,7 +630,7 @@ textarea {
 .site-header {
 	grid-area: header;
 	display: grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
 	padding: 0;
 	background-color: gray;
 	min-height: 60rem;
@@ -654,6 +654,7 @@ textarea {
 	background-color: rgba(8, 10, 6, 0.733);
 	display: flex;
 	align-items: center;
+	flex-direction: column;
 	padding-left: 1rem;
 }
 

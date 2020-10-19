@@ -29,7 +29,7 @@
 		<div class="header-left-column">
 			<div>
 		<?php
-			the_custom_logo();
+			
 			if ( is_front_page() && is_home() ) :
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -47,7 +47,8 @@
 			</div>
 		</div>
 		<div class="header-right-column">
-			
+
+			<?php the_custom_logo(); ?>	
 
 			<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'about' ); ?></button>
