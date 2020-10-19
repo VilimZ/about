@@ -7,7 +7,15 @@
 	padding: 0;
 }
 
+.entry-content {
+	background-color: brown;
+}
+
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
 	display: inline-block;
+	width: 5rem;
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
 }

@@ -47,8 +47,8 @@
 			</div>
 		</div>
 		<div class="header-right-column">
-
-			<?php the_custom_logo(); ?>	
+			<img src="" alt="">	
+			
 
 			<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'about' ); ?></button>
@@ -63,6 +63,7 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+		<?php the_custom_logo(); ?>	
 		</div><!-- .header-right-column -->
 
 		
