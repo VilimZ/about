@@ -11,7 +11,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<hr>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<hr>
 	</header><!-- .entry-header -->
 
 	<?php about_post_thumbnail(); ?>
@@ -31,7 +33,7 @@
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
-			<?php
+		    <?php
 			edit_post_link(
 				sprintf(
 					wp_kses(
@@ -48,7 +50,7 @@
 				'<span class="edit-link">',
 				'</span>'
 			);
-			?>
+			?>			
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

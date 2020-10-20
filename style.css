@@ -838,21 +838,34 @@ textarea {
 	right: 2rem;
 }
 
+/* Main content. */
+.entry-header {
+	text-align: center;
+	background-color: brown;
+	padding: 2rem;
+}
+
+.entry-header hr {
+	border: 1px doted grey;
+}
+
 .entry-title {
-	text-align: right;
+	margin: 0;
 }
 
 .entry-content {
 	background-color: brown;
+	margin: 0;
 }
 
 .what-about {
 	padding: 2rem;
 }
 
-.entry-header {
-	text-align: center;
-	background-color: brown;
+.me-picture {
+	background-color: lightseagreen;
+	margin: 0;
+	align-content: center;
 }
 
 /* Captions
