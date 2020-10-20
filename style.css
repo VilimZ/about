@@ -829,10 +829,6 @@ textarea {
 	padding: 0;
 }
 
-.entry-content {
-	background-color: brown;
-}
-
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
 	display: inline-block;
@@ -840,6 +836,23 @@ textarea {
 	position: absolute;
 	top: 2rem;
 	right: 2rem;
+}
+
+.entry-title {
+	text-align: right;
+}
+
+.entry-content {
+	background-color: brown;
+}
+
+.what-about {
+	padding: 2rem;
+}
+
+.entry-header {
+	text-align: center;
+	background-color: brown;
 }
 
 /* Captions
