@@ -24,9 +24,10 @@
 	background-color: brown;
 	padding: 2rem;
 }
-.entry-header  hr {
-	border: 1px doted grey;
-}
+ .entry-title>hr {
+	
+	width: 90%;
+} 
 
 
 .entry-title {
@@ -39,12 +40,46 @@
 	
 }
 
+.wp-block-separator {
+	width: 90%;
+	background-color: whitesmoke;
+	border: .2rem whitesmoke solid;
+}
+
 .what-about {
 	padding: 2rem;
 }
 
 .me-picture {
+	display: flex;
+	align-items: center;
 	background-color: lightseagreen;
-	margin: 0;
-	align-content: center;
+	
+	
+	min-height: 100vh;
+	
+
+	&-left {
+		width: 70%;
+		background-color: yellow;
+		padding-right: 0;		
+	}
+
+	&-right {
+		text-align: start;
+		background-color: green;
+		padding-left: 0;
+	}
+}
+
+.contact-me {
+
+	padding: 2rem;
+	background-color: whitesmoke;
+	margin: 0 auto;
+		
+}
+.contact-form {
+	width: 50%;
+	text-align: right;
 }

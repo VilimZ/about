@@ -6,6 +6,7 @@
  */
 ( function() {
 	const siteNavigation = document.getElementById( 'site-navigation' );
+	
 
 	// Return early if the navigation don't exist.
 	if ( ! siteNavigation ) {
@@ -31,6 +32,8 @@
 		menu.classList.add( 'nav-menu' );
 	}
 
+	const menuItem = siteNavigation.getElementsByClassName( 'header-menu' )[0];
+
 	// Toggle the .toggled class and the aria-expanded value each time the button is clicked.
 	button.addEventListener( 'click', function() {
 		siteNavigation.classList.toggle( 'toggled' );
@@ -46,11 +49,19 @@
 	document.addEventListener( 'click', function( event ) {
 		const isClickInside = siteNavigation.contains( event.target );
 
-		if ( ! isClickInside ) {
+		if ( ! isClickInside ){
 			siteNavigation.classList.remove( 'toggled' );
 			button.setAttribute( 'aria-expanded', 'false' );
 		}
 	} );
+
+	
+	menuItem.addEventListener('click', function(){
+
+		siteNavigation.classList.remove( 'toggled' );
+		button.setAttribute( 'aria-expanded', 'false' );
+
+	});
 
 	// Get all the link elements within the menu.
 	const links = menu.getElementsByTagName( 'a' );
@@ -62,6 +73,7 @@
 	for ( const link of links ) {
 		link.addEventListener( 'focus', toggleFocus, true );
 		link.addEventListener( 'blur', toggleFocus, true );
+		link.addEventListener( 'click', remToggle );
 	}
 
 	// Toggle focus each time a menu link with children receive a touch event.
@@ -96,4 +108,11 @@
 			menuItem.classList.toggle( 'focus' );
 		}
 	}
+
+	function remToggle() {
+		
+		siteNavigation.classList.remove('toggled');
+	}
+
+	
 }() );

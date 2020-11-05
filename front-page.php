@@ -21,7 +21,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
+			get_template_part( 'template-parts/content', 'intro' );
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
@@ -30,6 +30,12 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
+
+		<!-- Me part   -->
+		<?php get_template_part( 'template-parts/content', 'me' ); ?>
+
+		<!-- Contact part   -->
+		<?php get_template_part( 'template-parts/content', 'contact' ); ?>
 
 	</main><!-- #main -->
 

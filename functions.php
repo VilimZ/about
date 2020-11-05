@@ -51,6 +51,8 @@ if ( ! function_exists( 'about_setup' ) ) :
 		register_nav_menus(
 			array(
 				'header-menu' => esc_html__( 'Primary', 'about' ),
+				'social-menu' => esc_html__( 'Social Media Menu', 'about' ),
+				'section-menu' => esc_html__( 'Section Menu', 'about' ),
 			)
 		);
 
@@ -100,6 +102,15 @@ if ( ! function_exists( 'about_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		//Add theme support for wide images.
+		add_theme_support( 'align-wide' );
+
+		add_theme_support( 'wp-block-styles' );
+
+		//Add theme support for styling Gutenberg block editor.
+		add_theme_support( 'editor-styles' );
+		add_editor_style( 'assets/css/editor-style.css' );
 	}
 endif;
 add_action( 'after_setup_theme', 'about_setup' );
@@ -144,12 +155,15 @@ function about_scripts() {
 	wp_style_add_data( 'about-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'about-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'about-menu', get_template_directory_uri() . '/js/menu-glider.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'about_scripts' );
+
+
 
 /**
  * Implement the Custom Header feature.

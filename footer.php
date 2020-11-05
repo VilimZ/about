@@ -12,18 +12,13 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'about' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'about' ), 'WordPress' );
-				?>
-			</a>
+		<div class="site-footer-info">
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'about' ), 'about', '<a href="https://wpeclipse.com">Vilim Zovko</a>' );
+				printf(esc_html__( 'COPYRIGHT: %1$s  %2$s', 'about' ), '  &copy;', date_i18n( __('Y', 'about')) .' <a href="mailto:vilim.zovko@gmail.com">VILIM ZOVKO</a>' );
 				?>
+				<span class="sep"> | </span>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
