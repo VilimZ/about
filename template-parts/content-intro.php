@@ -36,8 +36,15 @@
             $homepageIntros->the_post(  );?>
     
             <div class="content-intro-item">
+              <div class="content-intro-item-header">
                 <h3><?php the_title( ); ?></h3>
+              </div>
+              <div class="content-intro-item-icon">
+                <svg class="content-intro-item-svg"><use  xlink:href="./wp-content/themes/about/assets/sprite.svg#icon-wordpress"></use></svg>
+              </div> 
+              <div class="content-intro-item-content">
                 <?php the_content(  ); ?>
+             </div>  
             </div>
             
         <?php }

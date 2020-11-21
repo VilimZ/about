@@ -72,17 +72,20 @@ var sticky = sectionMenu.offsetTop;
 
 function functionStickyNav() {
  
-	
+
   
 	if ((adminnav) && (window.pageYOffset >= sticky)){
-		sectionMenu.classList.add("sticky-nav-admin", "section-menu-sticky");
+		sectionMenu.classList.add("section-menu-sticky-admin", "section-menu-sticky");
+		sectionMenu.classList.remove("section-menu-hide");
 		
 	}
 	else if ((!adminnav) && (window.pageYOffset >= sticky)){
 		sectionMenu.classList.add("section-menu-sticky");
+		sectionMenu.classList.remove("section-menu-hide");
 	}
     else {
-    sectionMenu.classList.remove("section-menu-sticky");
+		sectionMenu.classList.remove("section-menu-sticky");
+		sectionMenu.classList.add("section-menu-hide");
   }
 
 }

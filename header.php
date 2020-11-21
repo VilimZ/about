@@ -51,12 +51,12 @@
 			
 
 			<video autoplay muted loop id="Video">
-				<source src="/wp-content/uploads/2020/10/Source-Code-4733.mp4" type="video/mp4">
+				<source src="/wp-content/uploads/2020/11/video.mp4" type="video/mp4"><!--  Source-Code-4733-2  -->
 			</video>
 
 		</div><!-- left column -->
 		<div class="header-right-column">
-			<img src="" alt="">
+			
 
 
 			<nav id="site-navigation" class="main-navigation">

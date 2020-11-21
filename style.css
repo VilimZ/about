@@ -621,6 +621,10 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+.page {
+	margin: 0 !important;
+}
+
 .no-sidebar .site {
 	display: grid;
 	grid-template-columns: auto;
@@ -636,6 +640,13 @@ textarea {
 	min-height: 60rem;
 }
 
+@media only screen and (min-width: 1025px) and (max-width: 1600px) {
+	.site-header {
+		height: 48rem;
+		min-height: 48rem;
+	}
+}
+
 @media only screen and (max-width: 1024px) {
 	.site-header {
 		display: block;
@@ -644,12 +655,17 @@ textarea {
 }
 
 .header-left-column {
-	background-color: green;
+	background-color: #191b18;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 	padding-right: 1rem;
-	color: white;
+	color: darkorange;
+	font-size: 1.2rem;
+	/* 	#VideoBlock {
+		z-index: -5;
+		overflow: hidden;
+	} */
 }
 
 @media only screen and (max-width: 1024px) {
@@ -665,6 +681,22 @@ textarea {
 	padding-right: 2rem;
 }
 
+.header-left-column p {
+	transform: translateY(5rem);
+	background-color: rgba(0, 0, 0, 0.616);
+	border-radius: 15px;
+	padding: 0 1rem 0 1rem;
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 414px) {
+	.header-left-column p {
+		letter-spacing: normal;
+		font-weight: 400;
+	}
+}
+
 .header-left-column h1 {
 	font-size: 1.5rem;
 }
@@ -674,13 +706,15 @@ textarea {
 	color: white;
 }
 
-.header-left-column #VideoBlock {
-	z-index: -5;
-	overflow: hidden;
+.header-left-column video {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
 }
 
 .header-right-column {
-	background-color: rgba(8, 10, 6, 0.733);
+	background-image: linear-gradient(rgba(8, 10, 6, 0.9), rgba(10, 12, 9, 0.9)), url("/wp-content/uploads/2020/11/earth.jpg");
+	background-size: cover;
 	display: flex;
 	align-items: center;
 	padding-left: 1rem;
@@ -691,7 +725,10 @@ textarea {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	background-color: brown;
+	flex-direction: row;
+	background-image: linear-gradient(to right bottom, rgba(165, 42, 42, 0.8), rgba(255, 69, 0, 0.8)), url("/wp-content/themes/about/assets/img/autumn-le.jpg");
+	background-size: cover;
+	background-position: top;
 	min-height: 110vh;
 	font-size: 1.2rem;
 }
@@ -699,6 +736,7 @@ textarea {
 @media only screen and (max-width: 1024px) {
 	.content-intro {
 		min-height: auto;
+		padding: .5rem;
 		height: 60vh;
 	}
 }
@@ -710,15 +748,57 @@ textarea {
 }
 
 .content-intro-item {
-	max-width: 28%;
-	margin: auto;
-	border: 2px black solid;
+	max-width: 25%;
+	margin: 8rem auto 3rem auto;
+	color: whitesmoke;
+	text-align: center;
+	min-height: 30rem;
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 2rem;
+	transition: all .5s ease;
+}
+
+.content-intro-item a {
+	color: wheat;
+}
+
+.content-intro-item-header {
+	min-height: 5rem;
+}
+
+.content-intro-item-header > h3 {
+	font-weight: 500;
+}
+
+.content-intro-item:hover {
+	box-shadow: 0 0.5rem 2rem rgba(189, 184, 184, 0.8);
+	transform: scale(1.1);
+	transition: all .7s ease;
+}
+
+.content-intro-item-svg {
+	width: 3rem;
+	height: 3rem;
+	fill: whitesmoke;
+	transition: all .5s ease-out;
+}
+
+.content-intro-item-svg:hover {
+	transform: rotate(80deg);
+	transition: all .5s ease-out;
+}
+
+@media only screen and (min-width: 1024) {
+	.content-intro-item {
+		min-height: 40rem;
+	}
 }
 
 @media only screen and (max-width: 768px) {
 	.content-intro-item {
 		min-width: 45%;
 		margin: 1rem auto;
+		min-height: 36rem;
 	}
 }
 
@@ -727,10 +807,6 @@ textarea {
 		min-width: 95%;
 		margin: 0 auto;
 	}
-}
-
-.content-intro-item > h3 {
-	text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -751,6 +827,12 @@ textarea {
 @media only screen and (max-width: 1024px) {
 	.content-me {
 		min-height: 55vh;
+	}
+}
+
+@media only screen and (max-width: 769px) {
+	.content-me {
+		padding-top: 2rem;
 	}
 }
 
@@ -784,6 +866,7 @@ textarea {
 	.content-me-item {
 		width: fit-content;
 		height: fit-content;
+		padding-top: 1rem;
 	}
 }
 
@@ -811,7 +894,12 @@ textarea {
 .content-contact-form {
 	margin-top: auto;
 	margin-bottom: auto;
+	border-radius: 15px;
 	z-index: 1;
+}
+
+.content-contact-form textarea {
+	resize: none;
 }
 
 @media only screen and (max-width: 320px) {
@@ -829,7 +917,7 @@ textarea {
 }
 
 .content-contact-message {
-	width: 30vw;
+	width: 23vw;
 	margin-top: auto;
 	margin-bottom: auto;
 	margin-right: 3rem;
@@ -842,15 +930,65 @@ textarea {
 	}
 }
 
+.content-contact button,
+.content-contact input[type="button"],
+.content-contact input[type="reset"],
+.content-contact input[type="submit"] {
+	border: whitesmoke 2px solid;
+	border-radius: 15px;
+	color: whitesmoke;
+	box-shadow: 0 5px 7px 0 grey;
+	cursor: pointer;
+}
+
+.content-contact button:active,
+.content-contact button:focus,
+.content-contact input[type="button"]:active,
+.content-contact input[type="button"]:focus,
+.content-contact input[type="reset"]:active,
+.content-contact input[type="reset"]:focus,
+.content-contact input[type="submit"]:active,
+.content-contact input[type="submit"]:focus {
+	border-color: orange;
+	outline: none;
+}
+
+.content-contact button:active, .content-contact input[type="button"]:active, .content-contact input[type="reset"]:active, .content-contact input[type="submit"]:active {
+	transform: translateY(4px);
+	box-shadow: 0 2px 4px 0 grey;
+}
+
+.content-contact button, .content-contact input[type="button"], .content-contact input[type="reset"], .content-contact input[type="submit"] {
+	border: 1px solid;
+	border-color: whitesmoke;
+	border-radius: 15px;
+	background: #e26140;
+	line-height: 1;
+	padding: 0.6em 1em 0.4em;
+	border-radius: 15px;
+}
+
+.content-contact .wpcf7 form.invalid .wpcf7-response-output,
+.content-contact .wpcf7 form.unaccepted .wpcf7-response-output {
+	border-color: #ffb900;
+	/* Yellow */
+	color: #dc3232;
+	max-width: 19rem;
+}
+
+.content-contact .wpcf7 form.sent, .content-contact .wpcf7-response-output {
+	max-width: 20rem;
+}
+
 .site-footer {
 	padding: 2rem;
-	background-color: chocolate;
+	background-image: linear-gradient(to right bottom, rgba(165, 42, 42, 0.8), rgba(255, 69, 0, 0.8));
 	text-align: center;
 }
 
 .site-footer-info, .site-footer-info > a:hover, .site-footer-info > a:active, .site-footer-info > a, .site-footer-info > a:visited {
-	color: black;
-	font-weight: bold;
+	color: whitesmoke;
+	font-weight: 400;
 	text-decoration: none;
 }
 
@@ -981,6 +1119,11 @@ textarea {
 
 .header-menu a {
 	color: white;
+	outline: none;
+}
+
+.header-menu a:active {
+	outline: 0;
 }
 
 .header-menu li {
@@ -1061,25 +1204,36 @@ textarea {
 	display: flex;
 	align-content: center;
 	justify-content: center;
-	padding-top: 1rem;
-	background-color: grey;
+	background-color: #272926;
 }
 
 .section-menu {
 	display: flex;
 	list-style: none;
 	justify-content: center;
+	padding: .5rem 0 .5rem 0;
+	margin-bottom: 0;
+	font-size: 1.2rem;
 	/* Sticky nav */
 }
 
 .section-menu a,
-.section-menu a:hover,
 .section-menu a:visited {
 	text-decoration: none;
+	color: antiquewhite;
+	outline: none;
+}
+
+.section-menu a:hover,
+.section-menu a:active {
+	color: orange;
 }
 
 .section-menu li {
-	margin-right: 1rem;
+	margin-right: 2rem;
+	border: white 1px solid;
+	border-radius: 50px;
+	padding: 0 1rem 0 1rem;
 }
 
 .section-menu-sticky {
@@ -1087,9 +1241,14 @@ textarea {
 	top: 0;
 	width: 100%;
 	z-index: 1000;
-	/*	&-admin {
-			top: 32px;
-		}*/
+}
+
+.section-menu-sticky-admin {
+	top: 32px;
+}
+
+.section-menu-hide {
+	display: none;
 }
 
 @media only screen and (max-width: 1024px) {

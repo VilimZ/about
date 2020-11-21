@@ -14,7 +14,7 @@
 
     <div class="content-contact">
         <div class="content-contact-message">
-        <h3>Contact me</h3> 
+        <h3>Contact me.</h3> 
         <p>
             Be free to contact me, you can fill the form or use one of the offered platforms. 
         </p>  

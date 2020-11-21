@@ -1,3 +1,7 @@
+.page {
+	margin: 0 !important;
+}
+
 .no-sidebar {
 
 	.site {
@@ -18,6 +22,10 @@
 	background-color: gray; //TEMP
 	min-height: 60rem;
 
+	@media only screen and (min-width:1025px) and  (max-width: 1600px) {
+		height: 48rem;
+		min-height: 48rem;
+	}
 	@media only screen and (max-width: 1024px) {
 		display: block;
 		min-height: fit-content;
@@ -26,12 +34,13 @@
 
 }
 .header-left-column {
-	background-color: green;
+	background-color: #191b18;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 	padding-right: 1rem;
-	color: white; 
+	color: darkorange; 
+	font-size: 1.2rem;
 
 	@media only screen and (max-width: 1024px) {
 		max-height: 40vh;
@@ -45,6 +54,21 @@
 		padding-right: 2rem;
 	}
 
+	p {
+		//margin-bottom: 0;
+		transform: translateY(5rem);
+		background-color: rgba(0, 0, 0, 0.616);
+		border-radius: 15px;
+		padding: 0 1rem 0 1rem;
+		font-weight: 500;
+		letter-spacing: 2px;
+
+		@media only screen and (max-width: 414px) {
+			letter-spacing: normal;
+			font-weight: 400;
+		}
+	}
+
 	h1{
 		font-size: 1.5rem;
 	}
@@ -55,15 +79,23 @@
 		color: white;	
 	}
 
-	#VideoBlock {
+	video {
+		width: 100%;
+		height: 100%;
+		object-fit: fill;
+	}
+
+/* 	#VideoBlock {
 		z-index: -5;
 		overflow: hidden;
-	}
+	} */
 }
 
 
 .header-right-column {
-	background-color: rgba(8, 10, 6, 0.733);
+	background-image:linear-gradient( rgba(8, 10, 6, 0.9), rgba(10, 12, 9, 0.9) ),  url('/wp-content/uploads/2020/11/earth.jpg') ;
+	background-size: cover;
+	//background-color: rgba(8, 10, 6, 0.733);
 	display: flex;
 	align-items: center;
 	padding-left: 1rem;
@@ -71,48 +103,100 @@
 } 
 
 .content-intro {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	background-color: brown;
+	display           : flex;
+	flex-wrap         : wrap;
+	justify-content   : center;
+	align-items       : center;
+	flex-direction    : row;
+	background-image  : linear-gradient(to right bottom, rgba(brown, 0.8), rgba(orangered, 0.8)), url('/wp-content/themes/about/assets/img/autumn-le.jpg');
+	background-size: cover;
+	background-position: top;
+
+
+
 	//padding: 0 2rem 0 2rem;
 	min-height: 110vh;
-	font-size: 1.2rem;
+	font-size : 1.2rem;
 
 	@media only screen and (max-width: 1024px) {
 		min-height: auto;
-		height: 60vh;
+		padding   : .5rem;
+		height    : 60vh;
 	}
+
 	@media only screen and (max-width: 768px) {
 		height: auto;
 	}
 
 	&-item {
-		max-width: 28%;
-		margin: auto;
-		border: 2px black solid;
+		max-width       : 25%;
+		margin          : 8rem auto 3rem auto;
+		color           : whitesmoke;
+		text-align      : center;
+		min-height      : 30rem;
+		background-color: rgba(black, 0.6);
+		padding         : 2rem;
+		transition      : all .5s ease;
+		//border: 2px black solid;
 
-		@media only screen and ( max-width: 768px) {
-			min-width: 45%;
-			margin: 1rem auto;			
+
+
+		a {
+			color: wheat;
 		}
-		@media only screen and ( max-width: 414px) {
+
+		&-header {
+			min-height: 5rem;
+
+			&>h3 {
+				font-weight: 500;
+			}
+		}
+
+		&:hover {
+			box-shadow: 0 .5rem 2rem rgba(rgb(189, 184, 184), 0.8);
+			transform : scale(1.1);
+			transition: all .7s ease;
+		}
+
+		&-svg {
+			width     : 3rem;
+			height    : 3rem;
+			fill      : whitesmoke;
+			transition: all .5s ease-out;
+		}
+
+		&-svg:hover {
+			transform : rotate(80deg);
+			transition: all .5s ease-out;
+		}
+
+		@media only screen and (min-width:1024) {
+			min-height: 40rem;
+		}
+
+
+
+		@media only screen and (max-width: 768px) {
+			min-width : 45%;
+			margin    : 1rem auto;
+			min-height: 36rem;
+		}
+
+		@media only screen and (max-width: 414px) {
 			min-width: 95%;
-			margin: 0 auto;			
+			margin   : 0 auto;
 		}
-		
-	}
-	&-item > h3 {
-		text-align: center;
+
 	}
 
-	@media only screen and ( max-width: 768px) {
+
+	@media only screen and (max-width: 768px) {
 		padding: .5rem;
-		
+
 	}
-		
-	
+
+
 }
 
 .content-me {
@@ -125,6 +209,10 @@
 
 	@media only screen and (max-width: 1024px){
 		min-height: 55vh;
+	}
+
+	@media only screen and (max-width: 769px) {
+		padding-top: 2rem;
 	}
 	
 	div:first-child {
@@ -149,12 +237,13 @@
 		//border: 2px grey solid;
 		//box-shadow: 2px 2px grayscale($color: #666262);
 
-		@media only screen and (max-width: 1024px){
+		@media only screen  and (max-width: 1024px ){
 			height: 50vh;
 		}
 		@media only screen and (max-width: 768px) { 
 			width: fit-content;
-			height: fit-content;			
+			height: fit-content;
+			padding-top: 1rem;			
 		}
 
 	}
@@ -183,14 +272,17 @@
 		//border: 2px solid black; //TEMP
 		margin-top: auto;
 		margin-bottom: auto;
+		border-radius: 15px;
 		z-index: 1;
+		textarea {
+			resize: none;
+		}
 		
 		@media only screen  and (max-width: 320px) {
 			form {
 			padding: 0 0 0 2rem;
 		   }
 		}
-
 	}
 
 	&-alt {
@@ -207,7 +299,7 @@
 
 
 	&-message {
-		 width: 30vw;
+		 width: 23vw;
 		 margin-top: auto;
 		 margin-bottom: auto;
 		 margin-right: 3rem;
@@ -218,17 +310,76 @@
 		 }
 	}
 
+  			&	button,
+			input[type="button"],
+			input[type="reset"],
+			input[type="submit"] {
+				border: whitesmoke 2px solid;
+				border-radius: 15px;
+				color: whitesmoke;
+				box-shadow: 0 5px 7px 0 grey;
+				cursor: pointer;
+
+
+			}
+			button:active,
+			button:focus,
+			input[type="button"]:active,
+			input[type="button"]:focus,
+			input[type="reset"]:active,
+			input[type="reset"]:focus,
+			input[type="submit"]:active,
+			input[type="submit"]:focus {
+				border-color: orange;
+				//border-radius: 15px !important;
+				outline: none;
+				
+				
+			}
+
+			button:active, 	input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active  {
+				transform: translateY(4px);
+				box-shadow: 0 2px 4px 0 grey;
+				//transition: .2s;
+			}
+
+
+			button, input[type="button"], input[type="reset"], input[type="submit"] {
+				border: 1px solid;
+				border-color: whitesmoke;
+				border-radius: 15px;
+				background: #e26140;
+				//color: rgba(0, 0, 0, 0.8);
+				line-height: 1;
+				padding: 0.6em 1em 0.4em;
+				border-radius: 15px;
+
+
+			}
+			
+			.wpcf7 form.invalid .wpcf7-response-output,
+			.wpcf7 form.unaccepted .wpcf7-response-output {
+				border-color: #ffb900; /* Yellow */
+				color: #dc3232;
+				max-width: 19rem;
+			}
+
+			.wpcf7 form.sent, .wpcf7-response-output {
+				max-width: 20rem;
+			}
+					
 }
+
 
 .site-footer {
 	padding: 2rem;
-	background-color: chocolate;
+	background-image: linear-gradient(to right bottom, rgba(brown,0.8), rgba(orangered, 0.8));
 	text-align: center;
 
 }
 .site-footer-info, .site-footer-info > a:hover, .site-footer-info > a:active, .site-footer-info > a, .site-footer-info > a:visited {
-	color: black;
-	font-weight: bold;
+	color: whitesmoke;
+	font-weight: 400;
 	text-decoration: none;
 }
  
